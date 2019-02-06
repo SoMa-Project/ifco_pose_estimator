@@ -17,7 +17,7 @@ ROS package that estimates the pose of an IFCO with respect to a camera.
 The package performs the following steps:
 
 * The `ifco_pose_server` subscribes to the `pcl_topic` and keeps only the points of the point cloud that might correspond to the IFCO based on thresholding of the A channel of an image of the scene in LAB format.
-* The `ifco_pose_server` fits an IFCO model to the resultant point cloud using ICP and the `ifco_pose` service returns the estimated `pose` of the IFCO with respect to the camera and the achieved `fitness`. The IFCO coordinate frame is placed on the IFCO base with the z axis pointing away from the opening of the IFCO and the x axis pointing along the long side of the IFCO.
+* The `ifco_pose_server` fits an IFCO model to the resultant point cloud using ICP and the `ifco_pose` service returns the estimated `pose` of the IFCO with respect to the camera and the achieved `fitness`. The IFCO coordinate frame is placed at the centre of the IFCO base with the z axis pointing away from the opening of the IFCO and the x axis pointing along the long side of the IFCO.
 * If the `ifco_pose` service was called with the parameter `publish_ifco` set to `True`, then the `ifco_pose_server` will also publish the IFCO model in the planning scene.
 
 ## Node input
