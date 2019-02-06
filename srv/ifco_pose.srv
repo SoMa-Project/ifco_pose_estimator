@@ -1,0 +1,4 @@
+bool publish_ifco
+---
+geometry_msgs/Pose pose # the pose of the IFCO base with the z axis pointing away from the IFCO opening and the x axis pointing along the long side of the IFCO 
+float64 fitness

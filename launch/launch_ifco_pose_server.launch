@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+        <arg name="A_high" default="115"/> <!--the maximum value of the A channel for a green IFCO-->
+        <arg name="A_low" default="95"/> <!--the minimum value of the A channel for a green IFCO-->
+        <arg name="icp_iterations" default="500"/> <!--the maximum number of iterations for ICP convergence-->
+        <arg name="pcl_topic" default="/camera/depth_registered/points"/>
+        <arg name="use_initial_pose_estimate" default="1"/>
+        <arg name="initial_pose_estimate" default='"0 0 0 0 0 0 1"'/>
+
+
+        <node name="ifco_pose_estimator" pkg="ifco_pose_estimator" type="ifco_pose_server" output="screen" respawn="false" args="$(arg A_high) $(arg A_low) $(arg icp_iterations) $(arg pcl_topic) $(arg use_initial_pose_estimate) $(arg initial_pose_estimate)">
+
+        </node>
+    
+</launch>
