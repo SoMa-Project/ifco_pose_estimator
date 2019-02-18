@@ -4,7 +4,7 @@
         <arg name="A_low" default="95"/> <!--the minimum value of the A channel for a green IFCO-->
         <arg name="icp_iterations" default="500"/> <!--the maximum number of iterations for ICP convergence-->
         <arg name="pcl_topic" default="/camera/depth_registered/points"/>
-        <arg name="use_initial_pose_estimate" default="1"/>
+        <arg name="use_initial_pose_estimate" default="0"/>
         <arg name="initial_pose_estimate" default='"0 0 0 0 0 0 1"'/>
 
 
